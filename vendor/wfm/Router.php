@@ -37,13 +37,9 @@ class Router
 
     public static function dispatch($url)
     {
-//        debug( self::$routes, 1);
-//        var_dump('Before, url:' . $url . '<br>');
         $url = self::removeQueryString($url);
-//        var_dump('After, url:' . $url . '<br>');
 
         if (self::matchRoute($url)) {
-//            debug(self::$route);
             if (!empty(self::$route['lang'])) {
                 App::$app->setProperty('lang', self::$route['lang']);
             }
@@ -60,6 +56,7 @@ class Router
                 if (method_exists($controllerObject, $action)) {
                     // у контроллера должны вызвать action - метод контроллера
                     $controllerObject->$action();
+                    // подключаем вид
                     $controllerObject->getView();
                 } else {
                     throw new \Exception("Метод {$controller}::{$action} не найден", 404);

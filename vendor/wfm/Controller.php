@@ -36,7 +36,6 @@ abstract class Controller
         // $this->route - текущий маршрут
         // $this->layout - шаблон; $this->view - вид
         (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);
-
     }
 
     public function set($data)

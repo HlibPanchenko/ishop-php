@@ -15,7 +15,7 @@ class App
         self::$app = Registry::getInstance();
         // заполняем наш контейнер
         $this->getParams();
-//        echo $query;
+
         Router::dispatch($query);
     }
     // подключаем параметры для нашего приложения. Создали их в config/params.php

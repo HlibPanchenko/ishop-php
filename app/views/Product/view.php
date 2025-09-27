@@ -12,9 +12,6 @@ use wfm\View;
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-light p-2">
             <?= $breadcrumbs ?>
-<!--            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home"></i></a></li>-->
-<!--            <li class="breadcrumb-item"><a href="#">Ноутбуки</a></li>-->
-<!--            <li class="breadcrumb-item active" aria-current="page">MacBook</li>-->
         </ol>
     </nav>
 </div>
